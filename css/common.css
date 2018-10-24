@@ -464,8 +464,12 @@ h1{
     display:flex;
     flex-direction: row;
     justify-content:space-between;
-}
 
+}
+.skill-left-items,.skill-right-items{
+    flex-grow: 1;
+    word-break: break-word;
+}
 .skill-container .skill-bottom{
     display:block;
     width: 100%;
@@ -478,7 +482,7 @@ h1{
 /*第五页*/
 .solution-item{
     position: relative;
-    width:644px;
+    width:675px;
     height:420px;
     margin:50px auto;
     overflow: hidden;
@@ -530,20 +534,29 @@ h1{
     position: absolute;
     left:60px;
     top:0;
-    width:315px;
+    width:347px;
     height:400px;
     color:#000;
     background: #eeeeee;
 }
 .descript h2{
-    margin:40px 0 40px 10px;
+    margin:40px 0 5px 10px;
     font-size: 24px;
     font-weight: 400;
 }
+.descript h4{
+    margin:5px 0 20px 10px;
+    font-weight: 300;
+}
+.descript a{
+    color:black;
+}
 .descript p{
     margin:0 10px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.7;
+    text-indent: 28px;
+    text-align: justify;
 }
 .descript{
     display: block;

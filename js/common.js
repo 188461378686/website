@@ -43,7 +43,7 @@ $(".options li a").on("click",function(){
         $(".solution-item li").stop(true,true);
         $(this).css({"background-color":"#81aa98"}).find("h1").css({"color":"#fff"}).find('img').attr('src','./images/RISS2.png');
         $(this).parent().siblings().find(".num").css({"background-color":"#e5e5e5"}).find("h1").css("color","#8a8a8a").find('img').attr('src','./images/RISS2-1.png');
-        $(this).parent().animate({width:"375px"},500).siblings('li').animate({width:'60px'},500);
+        $(this).parent().animate({width:"407px"},500).siblings('li').animate({width:'60px'},500);
     });
 
 /*手风琴效果 结束*/
