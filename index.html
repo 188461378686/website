@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
 
-    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
     <title>Title</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
@@ -94,7 +93,10 @@
                                             就读于东北林业大学，信息与计算机工程学院，信息管理与信息系统专业，目前为一名大三学生，
                                             大学期间，积极参加学校组织的各种活动，大一加入了学院团委，在组织中的两年中，和
                                             同学们配合完成各种工作，人际关系交往能力以及个人能力都得到了一定的锻炼；学习方面，有
-                                            一定的自学能力，自控能力较强，对于老师讲解的新知识可以在较短时间内接受并举一反三。
+                                            一定的自学能力，自控能力较强，对于老师讲解的新知识可以在较短时间内接受并举一反三。空闲
+                                            时间在校外做兼职，让我明白了生活不易，更加珍惜在校园里的生活，努力学习不怕吃苦。2018年三
+                                            月份开始自学前端，在学习的过程中有过迷茫有过想要放弃的念头，尤其是刚一开始学的的时候，
+                                            踩过大大小小的各种坑，通过不断查资料以及向学姐学长请教，最后还是坚持了下来。
                                             大一通过英语四级，大学期间两次获得校奖学金，以及获得校微信小程序三等奖
 
                                         </p>
@@ -184,12 +186,14 @@
                                        <li>2、熟练原生JS，以及js的一些方法</li>
                                        <li>3、熟练掌握Jq,Ajax等技术，可进行简单的前后端交互</li>
                                        <li>4、熟练ES6知识</li>
+                                       <li>5、熟练HTML5、CSS,可以实现一些效果，对语义化标签有一定的理解</li>
                                    </ul>
                                     <ul class="skill-right-items">
-                                        <li>5、熟练HTML5、CSS,可以实现一些效果，对语义化标签有一定的理解</li>
                                         <li>6、有一定的微信小程序基础，做过两个团队项目</li>
                                         <li>7、有一定的php基础，可运用CI框架进行简单的前后端交互</li>
                                         <li>8、自学ps、bootstrap，有一定的了解</li>
+                                        <li>8、除专业技能之外，我觉得自己具有一定的解决问题的能力，遇到问题时，
+                                            可以准确描述问题，提高查找答案的效率</li>
                                     </ul>
                                 </div>
                                 <div class="skill-bottom">
@@ -299,174 +303,253 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 
 <script src="js/common.js"></script>
-<script src="js/echarts.simple.min.js"></script>
+<script src="js/echarts.min.js"></script>
 
 <script type="text/javascript">
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('main'));
 
     // 指定图表的配置项和数据
-    var option = {
-        title: {
-            text: 'ECharts 入门示例'
+    option = {
+        tooltip: {
         },
-        tooltip: {},
-        legend: {
-            data:['销量']
+
+        series: [
+            {
+            type: 'pie',
+            radius: ['18%', '22%'],
+            center:['10%','50%'],
+            color:'#925455',
+            label: {
+                normal: {
+                    position: 'center'
+                }
+            },
+            data: [{
+                value: 90,
+                name: 'html已掌握内容',
+                label: {
+                    normal: {
+                        formatter: '90 %',
+                        textStyle: {
+                            fontSize: 18
+                        }
+                    }
+                },
+                tooltip:{
+                    trigger: 'item',
+                    formatter: ""
+                }
+            }, {
+                value: 10,
+                label: {
+                    normal: {
+                        formatter: '\nhtml',
+                        textStyle: {
+                            color: '#555',
+                            fontSize: 13
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#aaa'
+                    },
+                    emphasis: {
+                        color: '#aaa'
+                    }
+                },
+            }]
+         },
+            {
+            type: 'pie',
+            radius: ['18%', '22%'],
+            center:['30%','50%'],
+            color:'#5e6b66',
+            label: {
+                normal: {
+                    position: 'center'
+                }
+            },
+            data: [{
+                value: 90,
+                name: 'css已掌握内容',
+
+                label: {
+                    normal: {
+                        formatter: '90 %',
+                        textStyle: {
+                            fontSize: 18
+                        }
+                    }
+                },
+                tooltip:{
+                    trigger: 'item',
+                    formatter:'',
+                }
+            }, {
+                value: 10,
+
+                label: {
+                    normal: {
+                        formatter: '\ncss',
+                        textStyle: {
+                            color: '#555',
+                            fontSize: 13
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#aaa'
+                    },
+                    emphasis: {
+                        color: '#aaa'
+                    }
+                },
+            }]
         },
-        xAxis: {
-            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            {
+            type: 'pie',
+            radius: ['18%', '22%'],
+            center:['50%','50%'],
+            color:'#7b7080',
+            label: {
+                normal: {
+                    position: 'center'
+                }
+            },
+            data: [{
+                value: 85,
+                name: 'js已掌握内容',
+
+                label: {
+                    normal: {
+                        formatter: '85 %',
+                        textStyle: {
+                            fontSize: 18
+                        }
+                    }
+                },
+                tooltip:{
+                    trigger: 'item',
+                    formatter: ""
+                }
+            }, {
+                value: 15,
+                label: {
+                    normal: {
+                        formatter: '\njavaScript',
+                        textStyle: {
+                            color: '#555',
+                            fontSize: 13
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#aaa'
+                    },
+                    emphasis: {
+                        color: '#aaa'
+                    }
+                },
+            }]
+        },{
+            type: 'pie',
+            radius: ['18%', '22%'],
+            center:['70%','50%'],
+            color:'#8f6d3f',
+            label: {
+                normal: {
+                    position: 'center'
+                }
+            },
+            data: [{
+                value: 80,
+                name: 'jQ已掌握内容',
+                label: {
+                    normal: {
+                        formatter: '80 %',
+                        textStyle: {
+                            fontSize: 18
+                        }
+                    }
+                },
+                tooltip:{
+                    trigger: 'item',
+                    formatter: ""
+                }
+            }, {
+                value: 20,
+                label: {
+                    normal: {
+                        formatter: '\njQuery',
+                        textStyle: {
+                            color: '#555',
+                            fontSize: 13
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#aaa'
+                    },
+                    emphasis: {
+                        color: '#aaa'
+                    }
+                },
+            }]
         },
-        yAxis: {},
-        series: [{
-            name: '销量',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
+            {
+            type: 'pie',
+            radius: ['18%', '22%'],
+            center:['90%','50%'],
+            color:'#a2b1c4',
+            label: {
+                normal: {
+                    position: 'center'
+                }
+            },
+            data: [{
+                value: 75,
+                name: 'php已掌握内容',
+                label: {
+                    normal: {
+                        formatter: '75 %',
+                        textStyle: {
+                            fontSize: 18
+                        }
+                    }
+                },
+                tooltip:{
+                    trigger: 'item',
+                    formatter: ''
+                }
+            }, {
+                value: 25,
+                label: {
+                    normal: {
+                        formatter: '\nphp',
+                        textStyle: {
+                            color: '#555',
+                            fontSize: 13
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#aaa'
+                    },
+                    emphasis: {
+                        color: '#aaa'
+                    }
+                },
+            }]
         }]
     };
-
     // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option);
 </script>
-<!--<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>-->
-<!--<script type="text/javascript">-->
-    <!--// 路径配置-->
-    <!--require.config({-->
-        <!--paths: {-->
-            <!--echarts: 'http://echarts.baidu.com/build/dist'-->
-        <!--}-->
-    <!--});-->
-
-    <!--// 使用-->
-    <!--require(-->
-        <!--[-->
-            <!--'echarts',-->
-            <!--'echarts/chart/pie', // 使用柱状图就加载bar模块，按需加载-->
-            <!--// 'echarts/chart/funnel'-->
-        <!--],-->
-        <!--function (ec) {-->
-            <!--// 基于准备好的dom，初始化echarts图表-->
-            <!--var myChart = ec.init(document.getElementById('main'));-->
-
-            <!--var labelTop = {-->
-                <!--normal : {-->
-                    <!--label : {-->
-                        <!--show : true,-->
-                        <!--position : 'center',-->
-                        <!--formatter : '{b}',-->
-                        <!--textStyle: {-->
-                            <!--baseline : 'bottom'-->
-                        <!--}-->
-                    <!--},-->
-                    <!--labelLine : {-->
-                        <!--show : false-->
-                    <!--}-->
-                <!--}-->
-            <!--};-->
-            <!--var labelFromatter = {-->
-                <!--normal : {-->
-                    <!--label : {-->
-                        <!--formatter : function (params){-->
-                            <!--return 100 - params.value + '%'-->
-                        <!--},-->
-                        <!--textStyle: {-->
-                            <!--baseline : 'top'-->
-                        <!--}-->
-                    <!--}-->
-                <!--},-->
-            <!--}-->
-            <!--var labelBottom = {-->
-                <!--normal : {-->
-                    <!--color: '#ccc',-->
-                    <!--label : {-->
-                        <!--show : true,-->
-                        <!--position : 'center'-->
-                    <!--},-->
-                    <!--labelLine : {-->
-                        <!--show : false-->
-                    <!--}-->
-                <!--},-->
-                <!--emphasis: {-->
-                    <!--color: 'rgba(0,0,0,0)'-->
-                <!--}-->
-            <!--};-->
-            <!--var radius = [40, 55];-->
-            <!--option = {-->
-                <!--legend: {-->
-                    <!--x : 'center',-->
-                    <!--y : 'center',-->
-                    <!--data:[-->
-                        <!--'html','css','javascript','jquery','php'-->
-                    <!--]-->
-                <!--},-->
-
-                <!--series : [-->
-                    <!--{-->
-                        <!--type : 'pie',-->
-                        <!--center : ['10%', '30%'],-->
-                        <!--radius : radius,-->
-                        <!--x: '0%', // for funnel-->
-                        <!--itemStyle : labelFromatter,-->
-                        <!--data : [-->
-                            <!--{name:'other', value:10, itemStyle : labelBottom},-->
-                            <!--{name:'html', value:90,itemStyle : labelTop}-->
-                        <!--]-->
-                    <!--},-->
-                    <!--{-->
-                        <!--type : 'pie',-->
-                        <!--center : ['30%', '30%'],-->
-                        <!--radius : radius,-->
-                        <!--x:'20%', // for funnel-->
-                        <!--itemStyle : labelFromatter,-->
-                        <!--data : [-->
-                            <!--{name:'other', value:10, itemStyle : labelBottom},-->
-                            <!--{name:'css', value:90,itemStyle : labelTop}-->
-                        <!--]-->
-                    <!--},-->
-                    <!--{-->
-                        <!--type : 'pie',-->
-                        <!--center : ['50%', '30%'],-->
-                        <!--radius : radius,-->
-                        <!--x:'40%', // for funnel-->
-                        <!--itemStyle : labelFromatter,-->
-                        <!--data : [-->
-                            <!--{name:'other', value:15, itemStyle : labelBottom},-->
-                            <!--{name:'javascript', value:85,itemStyle : labelTop}-->
-                        <!--]-->
-                    <!--},-->
-                    <!--{-->
-                        <!--type : 'pie',-->
-                        <!--center : ['70%', '30%'],-->
-                        <!--radius : radius,-->
-                        <!--x:'60%', // for funnel-->
-                        <!--itemStyle : labelFromatter,-->
-                        <!--data : [-->
-                            <!--{name:'other', value:20, itemStyle : labelBottom},-->
-                            <!--{name:'jquery', value:80,itemStyle : labelTop}-->
-                        <!--]-->
-                    <!--},-->
-                    <!--{-->
-                        <!--type : 'pie',-->
-                        <!--center : ['90%', '30%'],-->
-                        <!--radius : radius,-->
-                        <!--x:'80%', // for funnel-->
-                        <!--itemStyle : labelFromatter,-->
-                        <!--data : [-->
-                            <!--{name:'other', value:25, itemStyle : labelBottom},-->
-                            <!--{name:'php', value:75,itemStyle : labelTop}-->
-                        <!--]-->
-                    <!--}-->
-                <!--]-->
-            <!--};-->
-
-
-
-            <!--// 为echarts对象加载数据-->
-            <!--myChart.setOption(option);-->
-        <!--}-->
-    <!--);-->
-<!--</script>-->
-
-
 </body>
 </html>
